@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Responsive Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      @media print {
+        .screen-only {
+          display: none;
+        }
+      }
+      @media (min-width: 1000px) {
+        body {
+          background-color: blue;
+        }
+      }
+      @media (max-width: 999px) {
+        body {
+          background-color: red;
+        }
+      }
+      @media (min-width: 1000px) {
+        h1::before {
+          content: "Welcome to my website"
+        }
+      }
+      @media (max-width: 999px) {
+        h1::before {
+          content: "Welcome";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1></h1>
+    <p>This is paragraph</p>
+    <p>This is another paragraph</p>
+    <p class="screen-only">This paragraph won't appear when you print</p>
+  </body>
+</html>
